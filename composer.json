@@ -48,6 +48,7 @@
     "symfony/polyfill-util": "^1.6",
     "symfony/yaml": "^3.3",
     "zircote/swagger-php": "3.x-dev",
-    "icyapril/cryptolib": "1.0.*"
+    "icyapril/cryptolib": "1.0.*",
+    "tuupola/slim-basic-auth":"3.0.0-rc.1"
   }
 }
