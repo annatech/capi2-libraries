@@ -51,5 +51,8 @@
     "zircote/swagger-php": "3.0.1",
     "icyapril/cryptolib": "1.0.1",
     "tuupola/slim-basic-auth":"3.2.*"
+  },
+  "autoload": {
+    "psr-4": {"Capi\\": "services/capi/capi/Capi"}
   }
 }
