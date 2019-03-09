@@ -59,7 +59,7 @@ class CapiRouter extends CapiApp
 			return $response->withJson(
 				$detail, 200
 			);
-		})->setName('getAbout');;
+		})->setName('getAbout');
 
 
 		// Mirrors the API request
