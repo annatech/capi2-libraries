@@ -5,6 +5,13 @@
   "keywords": ["capi", "joomla","library","api","annatech"],
   "homepage": "https://github.com/annatech/capi2-libraries",
   "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Steve Tsiopanos",
+      "email": "steve@tsiopanos.com",
+      "homepage": "https://www.linkedin.com/in/stevetsiopanos/"
+    }
+  ],
   "config": {
     "vendor-dir": "services"
   },
