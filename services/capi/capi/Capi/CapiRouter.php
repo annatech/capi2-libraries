@@ -56,16 +56,6 @@ class CapiRouter extends CapiApp
 			$detail->capi       = 'https://capi.app';
 			$detail->about      = 'cAPI is the fantastic result of an effort to mesh the Slim micro-framework with the Joomla Framework and CMS. Once that goal was accomplished, it soon became obvious that just building a Joomla RESTful API was only the beginning! By leveraging Joomla\'s advanced, extensible architecture and robust ACL, cAPI can transform your website into a true middleware service for anything ranging from SQL servers, MongoDB servers and even Microsoft\'s Active Directory (think of the SSO possibilities!).';
 
-			$about = array(
-				'version'   => $detail->version,
-				'copyright' => $detail->copyright,
-				'license'   => $detail->license,
-				'support'   => $detail->support,
-				'capi'      => $detail->capi,
-				'about'     => $detail->about
-
-			);
-
 			return $response->withJson(
 				$detail, 200
 			);
