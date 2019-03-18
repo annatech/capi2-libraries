@@ -58,7 +58,8 @@
     "symfony/yaml": "^3.4.17",
     "zircote/swagger-php": "3.0.1",
     "icyapril/cryptolib": "1.0.1",
-    "tuupola/slim-basic-auth":"3.2.*"
+    "tuupola/slim-basic-auth":"3.2.*",
+    "tuupola/slim-jwt-auth": "3.3.0"
   },
   "autoload": {
     "psr-4": {"Capi\\": "services/capi/capi/Capi"}

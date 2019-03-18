@@ -29,11 +29,6 @@ class CapiMiddleware
 	 */
 	function __invoke(Request $request,  Response $response, callable $next)
 	{
-		/**
-		 * Load Joomla plugin language files.
-		 */
-		$lang = JFactory::getLanguage();
-		$lang->load('slimjsonapimiddleware', dirname(__FILE__));
 
 		//$response->getBody()->write('BEFORE');
 		//$response = $next($request, $response);
@@ -42,12 +37,11 @@ class CapiMiddleware
 		return $next($request, $response);
 	}
 
-	function middleware(Request $request,  Response $response)
+	function middleware(Request $request,  Response $response, callable $next)
 	{
 		// $application = JFactory::getApplication('site');
 		// $app = $application->get('capi_app');
-
-
+		
 
 
 		// // Generic error handler
@@ -81,6 +75,7 @@ class CapiMiddleware
 		//		));
 		//	}
 		// });
+		
 	}
 
 	/**

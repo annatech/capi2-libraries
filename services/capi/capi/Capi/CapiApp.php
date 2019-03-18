@@ -54,9 +54,23 @@ class CapiApp
 		$this->container = new \Slim\Container($settings);
 
 		/**
+		 * Slim Response Time Start Timestamp
+		 */
+		$this->container['x_time'] = function ($c) {
+			return CapiSettings::getXtime();
+		};
+		
+		/**
 		 * Create Slim App Instance
 		 */
 		$this->loadSlimApp();
+
+		/**
+		 * Assign Error Handler
+		 */
+		$this->container['errorHandler'] = function ($c) {
+			return new CapiError();
+		};
 
 		/**
 		 * Add Middleware to Slim Instance
@@ -86,13 +100,19 @@ class CapiApp
 		return;
 	}
 
+	/**
+	 *
+	 * @return \Slim\App
+	 *
+	 * @since 2.0
+	 */
 	protected function loadSlimApp(){
 		/**
 		 * Create Slim App Instance
 		 */
 		$this->app = new \Slim\App($this->container);
-
-		$this->app->add(function ($request, $response, $next) {
+		
+		$this->app->add(function ($request, $response, $next)  {
 			/**
 			 * clone environment , using clone prevent to overide
 			 */
@@ -102,6 +122,7 @@ class CapiApp
 
 			$env->set('SCRIPT_NAME',$capi_base_path);
 			$this->request = \Slim\Http\Request::createFromEnvironment($env);
+
 			$response = $next($this->request, $response);
 			return $response;
 		});

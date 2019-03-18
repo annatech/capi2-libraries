@@ -27,6 +27,7 @@ class CapiSettings
 
 		$settings = [
 			'settings' => [
+				'determineRouteBeforeAppMiddleware' => true,
 				'displayErrorDetails' => $settingsObject->displayErrorDetails,
 
 				'logger' => [
@@ -100,5 +101,15 @@ class CapiSettings
 		 */
 		$settings->rate_limit = JComponentHelper::getParams('com_services')->get('api_rate_limit');
 		return $settings;
+	}
+
+	/**
+	 *
+	 * @return mixed
+	 *
+	 * @since 2.0
+	 */
+	public static function getXtime(){
+		return microtime(true);
 	}
 }

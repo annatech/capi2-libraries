@@ -49,7 +49,7 @@ class CapiRouter extends CapiApp
 			 * TODO: Configure conditional checks to allow the user to customize the information returned here.
 			 */
 
-			$detail->version    = '2.0.0-alpha';
+			$detail->version    = '2.0-alpha';
 			$detail->copyright  = 'Copyright (C) 2019 Steve Tsiopanos | Annatech LLC. All rights reserved.l';
 			$detail->license    = 'http://www.gnu.org/licenses/gpl-2.0.html';
 			$detail->support    = 'https://www.annatech.com';
