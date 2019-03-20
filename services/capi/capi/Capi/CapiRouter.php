@@ -28,14 +28,14 @@ class CapiRouter extends CapiApp
 	{
 		/**
 		 * @OA\Get(
-		 *     path="/[about]",
+		 *     path="/about",
 		 *     summary="Default base path returns cAPI applications details such as: version, copyright, license, support, capi, and about.",
 		 *     operationId="getAbout",
 		 *     tags={"capi"},
 		 *     @OA\Response(response="200", description="Return cAPI application details.")
 		 * )
 		 */
-		$app->get('/[about]', function (Request $request, Response $response, $args) {
+		$app->get('/about', function (Request $request, Response $response, $args) {
 
 			$detail             = new \stdClass();
 			$detail->version    = null;
@@ -61,8 +61,15 @@ class CapiRouter extends CapiApp
 			);
 		})->setName('getAbout');
 
-
-		// Mirrors the API request
+		/**
+		 * @OA\Get(
+		 *     path="/return",
+		 *     summary="Mirrors the API request.",
+		 *     operationId="getReturn",
+		 *     tags={"capi"},
+		 *     @OA\Response(response="200", description="Return cAPI request details.")
+		 * )
+		 */
 		$app->get('/return', function(Request $request, Response $response, $args){
 			$route = $request->getAttribute('route');
 			$headerObject = $request->getHeaders();
