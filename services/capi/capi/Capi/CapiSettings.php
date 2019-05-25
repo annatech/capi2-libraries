@@ -3,8 +3,8 @@
  * @package     capi\capi\Capi
  * @subpackage
  *
- * @copyright   A copyright
- * @license     A "Slug" license name e.g. GPL2
+ * @copyright   Copyright (C) 2019 Annatech LLC. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 namespace Capi;
@@ -27,6 +27,7 @@ class CapiSettings
 
 		$settings = [
 			'settings' => [
+				'determineRouteBeforeAppMiddleware' => true,
 				'displayErrorDetails' => $settingsObject->displayErrorDetails,
 
 				'logger' => [
@@ -100,5 +101,15 @@ class CapiSettings
 		 */
 		$settings->rate_limit = JComponentHelper::getParams('com_services')->get('api_rate_limit');
 		return $settings;
+	}
+
+	/**
+	 *
+	 * @return mixed
+	 *
+	 * @since 2.0
+	 */
+	public static function getXtime(){
+		return microtime(true);
 	}
 }

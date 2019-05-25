@@ -3,8 +3,8 @@
  * @package     capi\capi\Capi
  * @subpackage
  *
- * @copyright   A copyright
- * @license     A "Slug" license name e.g. GPL2
+ * @copyright   Copyright (C) 2019 Annatech LLC. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 namespace Capi;
@@ -28,14 +28,14 @@ class CapiRouter extends CapiApp
 	{
 		/**
 		 * @OA\Get(
-		 *     path="/[about]",
+		 *     path="/about",
 		 *     summary="Default base path returns cAPI applications details such as: version, copyright, license, support, capi, and about.",
 		 *     operationId="getAbout",
 		 *     tags={"capi"},
 		 *     @OA\Response(response="200", description="Return cAPI application details.")
 		 * )
 		 */
-		$app->get('/[about]', function (Request $request, Response $response, $args) {
+		$app->get('/about', function (Request $request, Response $response, $args) {
 
 			$detail             = new \stdClass();
 			$detail->version    = null;
@@ -49,30 +49,27 @@ class CapiRouter extends CapiApp
 			 * TODO: Configure conditional checks to allow the user to customize the information returned here.
 			 */
 
-			$detail->version    = '1.0-alpha';
+			$detail->version    = '2.0-alpha';
 			$detail->copyright  = 'Copyright (C) 2019 Steve Tsiopanos | Annatech LLC. All rights reserved.l';
 			$detail->license    = 'http://www.gnu.org/licenses/gpl-2.0.html';
 			$detail->support    = 'https://www.annatech.com';
 			$detail->capi       = 'https://capi.app';
-			$detail->about      = 'cAPI is the fantastic result of an effort to mesh the Slim micro-framework with the Joomla Framework and CMS. Once that goal was accomplished, it soon became obvious that just building a Joomla RESTful API was only the beginning! By leveraging Joomla\'s advanced, extensible architecture and robust ACL, cAPI can transform your website into a true middleware service for anything ranging from SQL servers, MongoDB servers and even Microsoft\'s Active Directory (think of the SSO possibilities!).';
-
-			$about = array(
-				'version'   => $detail->version,
-				'copyright' => $detail->copyright,
-				'license'   => $detail->license,
-				'support'   => $detail->support,
-				'capi'      => $detail->capi,
-				'about'     => $detail->about
-
-			);
+			$detail->about      = 'cAPI is the fantastic result of integrating Slim micro-framework with Joomla! CMS. By leveraging Joomla\'s advanced, extensible architecture and robust ACL, cAPI can transform your website into a true middleware service for anything ranging from SQL servers, MongoDB servers and even Microsoft\'s Active Directory (think of the SSO possibilities!).';
 
 			return $response->withJson(
 				$detail, 200
 			);
-		})->setName('getAbout');;
+		})->setName('getAbout');
 
-
-		// Mirrors the API request
+		/**
+		 * @OA\Get(
+		 *     path="/return",
+		 *     summary="Mirrors the API request.",
+		 *     operationId="getReturn",
+		 *     tags={"capi"},
+		 *     @OA\Response(response="200", description="Return cAPI request details.")
+		 * )
+		 */
 		$app->get('/return', function(Request $request, Response $response, $args){
 			$route = $request->getAttribute('route');
 			$headerObject = $request->getHeaders();
