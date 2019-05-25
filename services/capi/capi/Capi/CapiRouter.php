@@ -3,8 +3,8 @@
  * @package     capi\capi\Capi
  * @subpackage
  *
- * @copyright   A copyright
- * @license     A "Slug" license name e.g. GPL2
+ * @copyright   Copyright (C) 2019 Annatech LLC. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 namespace Capi;
@@ -54,7 +54,7 @@ class CapiRouter extends CapiApp
 			$detail->license    = 'http://www.gnu.org/licenses/gpl-2.0.html';
 			$detail->support    = 'https://www.annatech.com';
 			$detail->capi       = 'https://capi.app';
-			$detail->about      = 'cAPI is the fantastic result of an effort to mesh the Slim micro-framework with the Joomla Framework and CMS. Once that goal was accomplished, it soon became obvious that just building a Joomla RESTful API was only the beginning! By leveraging Joomla\'s advanced, extensible architecture and robust ACL, cAPI can transform your website into a true middleware service for anything ranging from SQL servers, MongoDB servers and even Microsoft\'s Active Directory (think of the SSO possibilities!).';
+			$detail->about      = 'cAPI is the fantastic result of integrating Slim micro-framework with Joomla! CMS. By leveraging Joomla\'s advanced, extensible architecture and robust ACL, cAPI can transform your website into a true middleware service for anything ranging from SQL servers, MongoDB servers and even Microsoft\'s Active Directory (think of the SSO possibilities!).';
 
 			return $response->withJson(
 				$detail, 200

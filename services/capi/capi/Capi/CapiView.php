@@ -1,10 +1,10 @@
 <?php
 /**
- * @package     Capi
+ * @package     capi\capi\Capi
  * @subpackage
  *
- * @copyright   A copyright
- * @license     A "Slug" license name e.g. GPL2
+ * @copyright   Copyright (C) 2019 Annatech LLC. All rights reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 namespace Capi;
