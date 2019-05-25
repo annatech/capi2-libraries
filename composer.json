@@ -13,10 +13,11 @@
     }
   ],
   "config": {
-    "vendor-dir": "services"
+    "vendor-dir": "/services"
   },
   "require": {
     "php": "^7.1",
+    "composer/installers": "1.6.0",
     "react/event-loop": "^0.4.3",
     "react/stream": "^0.7.7",
     "react/promise": "^2.7.0",
