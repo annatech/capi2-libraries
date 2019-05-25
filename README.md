@@ -1,4 +1,4 @@
-# capi2-libraries
+# services
 cAPI v2 Composer Libraries
 
 **cAPI v2 is currently under development. This composer library will be updated and branched prior to cAPI2 production release.**

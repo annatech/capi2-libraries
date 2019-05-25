@@ -1,5 +1,5 @@
 {
-  "name": "annatech/capi2-libraries",
+  "name": "annatech/services",
   "type": "project",
   "description": "cAPI v2 Composer library.",
   "keywords": ["capi", "joomla","library","api","annatech"],
@@ -13,10 +13,10 @@
     }
   ],
   "config": {
-    "vendor-dir": "/services"
+    "vendor-dir": "services"
   },
   "require": {
-    "php": "^7.1",
+    "php": "^7.2",
     "composer/installers": "1.6.0",
     "react/event-loop": "^0.4.3",
     "react/stream": "^0.7.7",
