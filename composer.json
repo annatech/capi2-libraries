@@ -12,8 +12,8 @@
       "homepage": "https://www.linkedin.com/in/stevetsiopanos/"
     }
   ],
-  "config": {
-    "vendor-dir": "services"
+  "autoload": {
+    "psr-4": { "annatech\\capi2-libraries\\": "src/" }
   },
   "require": {
     "php": "^7.2",
