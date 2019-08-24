@@ -1,5 +1,5 @@
 {
-  "name": "annatech/capi2-libraries",
+  "name": "capi2/libraries",
   "type": "project",
   "description": "cAPI v2 Composer library.",
   "keywords": ["capi", "joomla","library","api","annatech"],
