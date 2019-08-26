@@ -13,12 +13,7 @@
     }
   ],
   "autoload": {
-    "psr-4": { "annatech\\capi\\": "src/" }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.x-dev"
-    }
+    "psr-4": { "Capi\\": "src/" }
   },
   "require": {
     "php": "^7.2",
