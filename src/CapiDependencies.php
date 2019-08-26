@@ -7,7 +7,7 @@
  * @license     http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace Capi;
+namespace Annatech\Capi;
 
 
 class CapiDependencies
