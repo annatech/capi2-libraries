@@ -7,7 +7,7 @@
  * @license     http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace capi;
+namespace Capi;
 
 use \Slim\Http\Response;
 use \Slim\Http\Request;

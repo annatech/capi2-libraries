@@ -6,7 +6,7 @@
  * @copyright   Copyright (C) 2019 Annatech LLC. All rights reserved.
  * @license     http://www.gnu.org/licenses/gpl-2.0.html
  */
-namespace capi;
+namespace Capi;
 
 use Joomla\CMS\Plugin\PluginHelper;
 use JFactory;
